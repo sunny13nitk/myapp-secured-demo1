@@ -17,7 +17,7 @@ app.use(passport.authenticate('JWT', { session: false }));
 
 
 app.get('/', function (req, res, next) {
-  res.send('Application user: ' + req.user.id);
+  res.send('Authenticated Application user: ' + req.user.id);
 });
 
 const port = process.env.PORT || 4000;
